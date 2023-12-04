@@ -15,9 +15,9 @@ app.get('/user/:id', (req, res) => {
   const database = [
     {
       id: 'tb',
-      name: "Taha Murtaza Bombaywala",
+      name: "Taha Murtaza",
       social: {
-        instagram: 'https://www.instagram.com/bombay_14/',
+        instagram: 'https://www.instagram.com/tahabombay_14/',
         twitter: 'https://twitter.com/tahamurtaza'
       }
     },
