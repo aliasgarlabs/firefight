@@ -16,7 +16,7 @@ app.get('/user/:id', (req, res) => {
     },
     {
       id: 'ab',
-      name: "Aliasgar Murtaza",
+      name: "Aliasgar Murtaza Bombay",
       social: {
         instagram: 'https://www.instagram.com/aliasgarmurtaza/',
         twitter: 'https://twitter.com/aliasgarmurtaza'
@@ -31,7 +31,7 @@ app.get('/user/:id', (req, res) => {
     return;
   }
 
-  // HTML and CSS for a profile page with social links
+  // HTML and CSS for a modern profile page
   const htmlContent = `
     <!DOCTYPE html>
     <html lang="en">
@@ -39,10 +39,11 @@ app.get('/user/:id', (req, res) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>${user.name}'s Profile</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
       <style>
         body {
-          font-family: 'Arial', sans-serif;
-          background-color: #f4f4f4;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #f5f5f5;
           margin: 0;
           display: flex;
           align-items: center;
@@ -53,8 +54,10 @@ app.get('/user/:id', (req, res) => {
           background-color: #fff;
           padding: 20px;
           border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           text-align: center;
+          max-width: 400px;
+          width: 100%;
         }
         .profile-image {
           width: 100px;
@@ -69,12 +72,17 @@ app.get('/user/:id', (req, res) => {
         }
         p {
           color: #666;
+          margin-bottom: 20px;
         }
         .social-links a {
           display: inline-block;
           margin: 0 10px;
           text-decoration: none;
           color: #3498db;
+          transition: color 0.3s ease-in-out;
+        }
+        .social-links a:hover {
+          color: #2980b9;
         }
       </style>
     </head>
