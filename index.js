@@ -1,28 +1,26 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
 
 app.get('/user/:id', (req, res) => {
-  var request_id = req.params.id;
+  const requestId = req.params.id;
 
-  var database = [
+  const database = [
     {
       id: 'tb',
       name: "Taha Murtaza Bombaywala"
     },
     {
       id: 'ab',
-      name: "Aliasgar Murtaza Bombaywala"
+      name: "Aliasgar Murtaza"
     }
-  ]
+  ];
 
-  var result = database.find((i) => i.id === request_id).name;
+  const result = database.find(item => item.id === requestId).name;
 
-  res.send(`Hello ${result}`)
-})
-
-
+  res.send(`Hello ${result}`);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Server is listening on port ${port}`);
+});
